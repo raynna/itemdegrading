@@ -20,7 +20,9 @@ public class ItemDegrade {
 
 		AT_OUTGOING_HIT,
 
-		AT_INCOMMING_HIT;
+		AT_INCOMMING_HIT,
+		
+		HITS;
 	}
 
 	public enum ItemStore {
@@ -469,9 +471,16 @@ public class ItemDegrade {
 
 		CHAOTIC_KITESHIELD(new Item(18359), new Item(18360), DegradeType.AT_INCOMMING_HIT, 30000),
 
-		EAGLE_EYE_SHIELD(new Item(18361), new Item(18362), DegradeType.AT_INCOMMING_HIT, 100),
+		EAGLE_EYE_SHIELD(new Item(18361), new Item(18362), DegradeType.AT_INCOMMING_HIT, 30000),
 
-		FARSEER_SHIELD(new Item(18363), new Item(18364), DegradeType.AT_INCOMMING_HIT, 30000)
+		FARSEER_SHIELD(new Item(18363), new Item(18364), DegradeType.AT_INCOMMING_HIT, 30000),
+		
+		
+		/**
+		 * Ringofrecoil
+		 */
+		
+		RING_OF_RECOIL(new Item(2550), null, DegradeType.HITS, 400)
 
 		;
 
@@ -530,9 +539,4 @@ public class ItemDegrade {
 			return hits;
 		}
 	}
-
-	public static int getSecondsInTicks(int ticks) {
-		return (int) (ticks * 0.6);
-	}
-
 }
